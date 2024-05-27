@@ -136,8 +136,8 @@ pub struct Meta {
     pub page_rule_quota: u32,
     /// Indicates if URLs on the zone have been identified as hosting phishing content.
     pub phishing_detected: bool,
-    /// Indicates whether the zone is allowed to be connected to multiple Railguns at once
-    pub multiple_railguns_allowed: bool,
+    // /// Indicates whether the zone is allowed to be connected to multiple Railguns at once
+    // pub multiple_railguns_allowed: bool,
 }
 
 /// A Zone is a domain name along with its subdomains and other identities
@@ -175,8 +175,8 @@ pub struct Zone {
     pub original_name_servers: Option<Vec<String>>,
     /// Registrar for the domain at the time of switching to Cloudflare
     pub original_registrar: Option<String>,
-    /// Information about the owner of the zone
-    pub owner: Owner,
+    // /// Information about the owner of the zone
+    // pub owner: Owner,
     /// Indicates if the zone is only using Cloudflare DNS services. A true value means the zone
     /// will not receive security or performance benefits.
     pub paused: bool,

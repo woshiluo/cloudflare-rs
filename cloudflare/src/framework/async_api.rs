@@ -91,6 +91,8 @@ async fn map_api_response<ResultType: ApiResult>(
     resp: reqwest::Response,
 ) -> ApiResponse<ResultType> {
     let status = resp.status();
+
+    //    println!("{:?}", resp.text().await?);
     if status.is_success() {
         let parsed: Result<ApiSuccess<ResultType>, reqwest::Error> = resp.json().await;
         match parsed {
